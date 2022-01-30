@@ -1,0 +1,30 @@
+{
+  "private": true,
+  "name": "remix-app-template-js",
+  "description": "",
+  "license": "",
+  "scripts": {
+    "build": "remix build",
+    "dev": "remix dev",
+    "postinstall": "remix setup node",
+    "start": "remix-serve build"
+  },
+  "dependencies": {
+    "@keystone-6/document-renderer": "^1.0.0",
+    "@remix-run/react": "^1.1.3",
+    "@remix-run/serve": "^1.1.3",
+    "dotenv": "^14.3.2",
+    "graphql": "^16.3.0",
+    "graphql-request": "^4.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "remix": "^1.1.3"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^1.1.3"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "sideEffects": false
+}
