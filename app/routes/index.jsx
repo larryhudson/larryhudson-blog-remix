@@ -1,8 +1,8 @@
-import { Link, useLoaderData } from "remix";
+import { Link, useLoaderData, json } from "remix";
 import { fetchQuery } from "~/utils/graphql.server";
 
 export const loader = async () => {
-  return await fetchQuery({
+  const postsData = await fetchQuery({
     query: `query PostsQuery {
       posts(
         where: {status: {
@@ -19,6 +19,15 @@ export const loader = async () => {
       }
     }`
   }).then(r => r.posts)
+
+  return json(
+    postsData,
+    {
+      headers: {
+        'Cache-Control': 's-maxage=300'
+      }
+    }
+  )
 
 }
 
