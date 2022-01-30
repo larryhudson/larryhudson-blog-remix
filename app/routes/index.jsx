@@ -12,6 +12,7 @@ export const loader = async () => {
           publishDate: desc
         }
       ) {
+        id
         title
         slug
         publishDate
@@ -37,7 +38,7 @@ export default function Index() {
       {posts && (
         <ul>
           {posts.map(post => (
-            <li><Link to={`/posts/${post.slug}`}>{post.title}</Link></li>
+            <li key={post.id}><Link to={`/posts/${post.slug}`}>{post.title}</Link></li>
           ))}
         </ul>
       )}
