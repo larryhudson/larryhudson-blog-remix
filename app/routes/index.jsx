@@ -4,7 +4,14 @@ import { fetchQuery } from "~/utils/graphql.server";
 export const loader = async () => {
   return await fetchQuery({
     query: `query PostsQuery {
-      posts {
+      posts(
+        where: {status: {
+          equals: published
+        }},
+        orderBy: {
+          publishDate: desc
+        }
+      ) {
         title
         slug
         publishDate
