@@ -24,7 +24,7 @@ export const loader = async () => {
     postsData,
     {
       headers: {
-        'Cache-Control': 's-maxage=300'
+        'Cache-Control': 's-maxage=86400'
       }
     }
   )
@@ -33,7 +33,7 @@ export const loader = async () => {
 
 export const headers = () => {
   return {
-      'Cache-Control': 's-maxage=300'
+      'Cache-Control': 's-maxage=86400'
   }
 }
 

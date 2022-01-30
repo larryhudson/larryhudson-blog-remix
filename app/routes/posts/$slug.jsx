@@ -25,7 +25,7 @@ export const loader = async ({params}) => {
         postData, {
             // these headers are just for the 'loader' JSON data, that gets fetched when you do a JS navigate
             headers: {
-                'Cache-Control': 's-maxage=300'
+                'Cache-Control': 's-maxage=86400'
             }
         }
     )
@@ -34,7 +34,7 @@ export const loader = async ({params}) => {
 // these headers are for the full page load
 export const headers = () => {
     return {
-        'Cache-Control': 's-maxage=300'
+        'Cache-Control': 's-maxage=86400'
     }
 }
 
