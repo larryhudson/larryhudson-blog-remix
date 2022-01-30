@@ -22,6 +22,12 @@ export const loader = async ({params}) => {
     }).then(r => r.post)
 }
 
+export const headers = () => {
+    return {
+        'Cache-Control': 's-maxage=300'
+    }
+}
+
 export default function PostPage() {
     const post = useLoaderData()
     return <div>

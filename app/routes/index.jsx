@@ -21,6 +21,12 @@ export const loader = async () => {
 
 }
 
+export const headers = () => {
+  return {
+      'Cache-Control': 's-maxage=300'
+  }
+}
+
 export default function Index() {
   const posts = useLoaderData()
 
