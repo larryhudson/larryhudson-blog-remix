@@ -13,6 +13,7 @@ export const loader = async ({params}) => {
                   document
               }
               slug
+              status
               publishDate
             }
           }`,
@@ -20,6 +21,12 @@ export const loader = async ({params}) => {
               slug: params.slug
           }
     }).then(r => r.post)
+
+    if (postData.status !== 'published') {
+        throw new Response("Not Found", {
+            status: 404
+          });
+    }
 
     return json(
         postData, {
