@@ -19,35 +19,35 @@ export const loader = async () => {
         slug
         publishDate
       }
-    }`
-  }).then(r => r.posts)
+    }`,
+  }).then((r) => r.posts);
 
-  return json(
-    postsData,
-    {
-      headers: {
-        'Cache-Control': 's-maxage=86400'
-      }
-    }
-  )
-
-}
+  return json(postsData, {
+    headers: {
+      "Cache-Control": "s-maxage=86400",
+    },
+  });
+};
 
 export const headers = () => {
   return {
-      'Cache-Control': 's-maxage=86400'
-  }
-}
+    "Cache-Control": "s-maxage=86400",
+  };
+};
 
-function PostItem({post}) {
-  return <div>
-    <h3 style={{marginBottom: `0.5rem`}}><Link to={`/posts/${post.slug}`}>{post.title}</Link></h3>
-    <small>{isoToNiceDate(post.publishDate)}</small>
-  </div>
+function PostItem({ post }) {
+  return (
+    <div>
+      <h3 style={{ marginBottom: `0.5rem` }}>
+        <Link to={`/posts/${post.slug}`}>{post.title}</Link>
+      </h3>
+      <small>{isoToNiceDate(post.publishDate)}</small>
+    </div>
+  );
 }
 
 export default function Index() {
-  const posts = useLoaderData()
+  const posts = useLoaderData();
 
   return (
     <div>
@@ -55,7 +55,7 @@ export default function Index() {
       <h2>Posts</h2>
       {posts && (
         <section>
-          {posts.map(post => (
+          {posts.map((post) => (
             <PostItem post={post} key={post.id} />
           ))}
         </section>

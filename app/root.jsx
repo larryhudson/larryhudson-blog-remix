@@ -4,7 +4,7 @@ import {
   Meta,
   Outlet,
   Scripts,
-  ScrollRestoration
+  ScrollRestoration,
 } from "remix";
 
 export function meta() {
@@ -14,10 +14,10 @@ export function meta() {
 export function links() {
   return [
     {
-      rel: 'stylesheet',
-      href: `https://unpkg.com/simpledotcss/simple.min.css` // find out more https://simplecss.org/
-    }
-  ]
+      rel: "stylesheet",
+      href: `https://unpkg.com/simpledotcss/simple.min.css`, // find out more https://simplecss.org/
+    },
+  ];
 }
 
 export default function App() {
