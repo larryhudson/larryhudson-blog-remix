@@ -1,0 +1,9 @@
+/* adapted from: https://dev.to/swyx/100-bytes-of-css-to-look-great-everywhere-19pd */
+html {
+    max-width: 70ch;
+    padding: 1rem;
+    margin: auto;
+    line-height: 1.75;
+    font-size: 1.25rem;
+    font-family: sans-serif;
+}
