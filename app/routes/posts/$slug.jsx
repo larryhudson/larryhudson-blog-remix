@@ -1,6 +1,7 @@
 import { Link, useLoaderData, json } from "remix"
 import { fetchQuery } from "~/utils/graphql.server"
 import { DocumentRenderer } from '@keystone-6/document-renderer';
+import { isoToNiceDate } from "~/utils/date";
 
 export const loader = async ({params}) => {
     const postData = await fetchQuery({
@@ -55,7 +56,8 @@ export default function PostPage() {
     const post = useLoaderData()
     return <div>
         <p><Link to="/">Back to posts</Link></p>
-        <h1>{post.title}</h1>
+        <h1 style={{marginBottom: `0.5rem`}}>{post.title}</h1>
+        <small>{isoToNiceDate(post.publishDate)}</small>
         <DocumentRenderer document={post.content.document} />
     </div>
 }

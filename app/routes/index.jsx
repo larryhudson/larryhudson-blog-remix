@@ -1,5 +1,7 @@
 import { Link, useLoaderData, json } from "remix";
 import { fetchQuery } from "~/utils/graphql.server";
+import { DateTime } from "luxon";
+import { isoToNiceDate } from "~/utils/date";
 
 export const loader = async () => {
   const postsData = await fetchQuery({
@@ -39,8 +41,8 @@ export const headers = () => {
 
 function PostItem({post}) {
   return <div>
-    <h3><Link to={`/posts/${post.slug}`}>{post.title}</Link></h3>
-    <small>{Date(post.publishDate)}</small>
+    <h3 style={{marginBottom: `0.5rem`}}><Link to={`/posts/${post.slug}`}>{post.title}</Link></h3>
+    <small>{isoToNiceDate(post.publishDate)}</small>
   </div>
 }
 
