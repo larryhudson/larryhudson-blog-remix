@@ -37,6 +37,13 @@ export const headers = () => {
   }
 }
 
+function PostItem({post}) {
+  return <div>
+    <h3><Link to={`/posts/${post.slug}`}>{post.title}</Link></h3>
+    <small>{Date(post.publishDate)}</small>
+  </div>
+}
+
 export default function Index() {
   const posts = useLoaderData()
 
@@ -45,11 +52,11 @@ export default function Index() {
       <h1>Larry Hudson</h1>
       <h2>Posts</h2>
       {posts && (
-        <ul>
+        <section>
           {posts.map(post => (
-            <li key={post.id}><Link to={`/posts/${post.slug}`}>{post.title}</Link></li>
+            <PostItem post={post} key={post.id} />
           ))}
-        </ul>
+        </section>
       )}
     </div>
   );
