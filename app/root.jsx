@@ -7,17 +7,15 @@ import {
   ScrollRestoration
 } from "remix";
 
-import mainStylesHref from "~/styles/main.css";
-
 export function meta() {
-  return { title: "New Remix App" };
+  return { title: "Larry Hudson" };
 }
 
 export function links() {
   return [
     {
       rel: 'stylesheet',
-      href: mainStylesHref
+      href: `https://unpkg.com/simpledotcss/simple.min.css` // find out more https://simplecss.org/
     }
   ]
 }

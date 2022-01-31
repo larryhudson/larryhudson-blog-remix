@@ -38,6 +38,12 @@ export const headers = () => {
     }
 }
 
+export const meta = ({data}) => {
+    return {
+        title: `${data.title} – Larry Hudson`
+    }
+}
+
 export default function PostPage() {
     const post = useLoaderData()
     return <div>

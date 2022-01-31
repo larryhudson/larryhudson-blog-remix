@@ -42,7 +42,7 @@ export default function Index() {
 
   return (
     <div>
-      <h1>My blog</h1>
+      <h1>Larry Hudson</h1>
       <h2>Posts</h2>
       {posts && (
         <ul>
