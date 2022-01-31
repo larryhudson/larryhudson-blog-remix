@@ -23,7 +23,7 @@ export const loader = async ({params}) => {
           }
     }).then(r => r.post)
 
-    if (postData.status !== 'published') {
+    if (postData === null || postData.status !== 'published') {
         throw new Response("Not Found", {
             status: 404
           });
