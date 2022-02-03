@@ -24,14 +24,14 @@ export const loader = async () => {
 
   return json(postsData, {
     headers: {
-      "Cache-Control": "s-maxage=86400",
+      "Cache-Control": "public, s-maxage=86400",
     },
   });
 };
 
 export const headers = () => {
   return {
-    "Cache-Control": "s-maxage=86400",
+    "Cache-Control": "public, s-maxage=86400",
   };
 };
 

@@ -32,7 +32,7 @@ export const loader = async ({ params }) => {
   return json(postData, {
     // these headers are just for the 'loader' JSON data, that gets fetched when you do a JS navigate
     headers: {
-      "Cache-Control": "s-maxage=86400",
+      "Cache-Control": "public, s-maxage=86400",
     },
   });
 };
@@ -49,7 +49,7 @@ export function links() {
 // these headers are for the full page load
 export const headers = () => {
   return {
-    "Cache-Control": "s-maxage=86400",
+    "Cache-Control": "public, s-maxage=86400",
   };
 };
 
