@@ -37,6 +37,15 @@ export const loader = async ({ params }) => {
   });
 };
 
+export function links() {
+  return [
+    {
+      rel: "stylesheet",
+      href: `https://unpkg.com/simpledotcss/simple.min.css`, // find out more https://simplecss.org/
+    },
+  ];
+}
+
 // these headers are for the full page load
 export const headers = () => {
   return {

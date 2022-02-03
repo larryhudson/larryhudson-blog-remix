@@ -35,6 +35,15 @@ export const headers = () => {
   };
 };
 
+export function links() {
+  return [
+    {
+      rel: "stylesheet",
+      href: `https://unpkg.com/simpledotcss/simple.min.css`, // find out more https://simplecss.org/
+    },
+  ];
+}
+
 function PostItem({ post }) {
   return (
     <div>

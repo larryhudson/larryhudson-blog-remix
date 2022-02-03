@@ -11,15 +11,6 @@ export function meta() {
   return { title: "Larry Hudson" };
 }
 
-export function links() {
-  return [
-    {
-      rel: "stylesheet",
-      href: `https://unpkg.com/simpledotcss/simple.min.css`, // find out more https://simplecss.org/
-    },
-  ];
-}
-
 export default function App() {
   return (
     <html lang="en">

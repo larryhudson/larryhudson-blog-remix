@@ -1,0 +1,113 @@
+:root {
+  --color-0: #00072a;
+  --color-1: #000a3a;
+  --color-2: #000c4a;
+  --color-3: #000f5a;
+  --color-4: #2a3776;
+  --color-5: #576193;
+  --color-6: #848bb0;
+  --color-7: #b1b6cd;
+  --color-8: #dee0ea;
+
+  --color-bg: var(--color-8);
+  --color-text: var(--color-3);
+  --color-header-bg: var(--color-3);
+  --color-header-text: var(--color-8);
+  --color-pill-bg: var(--color-3);
+
+  --color-card-bg: var(--color-7);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+@media screen {
+  body {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+h1 {
+  font-weight: 900;
+}
+
+.inverse {
+  color: var(--color-header-text);
+  background-color: var(--color-header-bg);
+}
+
+a {
+  color: var(--color-text);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 1cm 1cm 0.5cm 1cm;
+}
+
+.page-container {
+  padding: 0.5cm 1cm 1cm 1cm;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.columns-2 {
+  display: flex;
+}
+
+.columns-2 > * {
+  flex: 0 0 50%;
+}
+
+.larry-image {
+  margin-right: 1rem;
+  width: 125px;
+  height: auto;
+}
+
+.float-left {
+  float: left;
+}
+
+.card {
+  border: 1px solid var(--color-text);
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+  background-color: var(--color-card-bg);
+}
+
+.pill {
+  background: var(--color-pill-bg);
+  border: 2px solid var(--color-text);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
+.pill + .pill {
+  margin-left: 0.25rem;
+}
+
+.pill:hover {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
